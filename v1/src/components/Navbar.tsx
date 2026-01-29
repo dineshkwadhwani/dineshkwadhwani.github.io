@@ -15,6 +15,7 @@ const Navbar = ({ currentSection, onNavigate }: NavbarProps) => {
     { label: "Work Experience", index: 1 },
     { label: "About Me", index: 2 },
     { label: "Contact", index: 3 },
+    { label: "Mentorship", index: 4 },
   ];
 
   const handleNavigate = (index: number) => {

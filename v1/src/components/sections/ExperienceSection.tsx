@@ -1,297 +1,308 @@
 import { motion } from "framer-motion";
-import { Code2, Layers, RefreshCw, Zap, GitBranch, Database, Server, FolderOpen, Building2, ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight, Code, RefreshCw, Layers, Zap, FolderOpen, Building2, GitBranch, Database, Server, CodeXml } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const ExperienceSection = () => {
   const navigate = useNavigate();
 
-  const experiences = [
+  const phases = [
     {
       id: "foundation",
-      phase: "Foundation",
-      icon: Code2,
-      year: "Phase 01",
-      description: "Building core systems from first principles. Understanding architecture patterns that scale beyond immediate requirements.",
-      tech: ["System Design", "Core Concepts", "Fundamentals"],
+      number: "Phase 01",
+      title: "Foundation",
+      icon: Code,
+      description: "Building core systems from first principles. Understanding architecture patterns that scale...",
     },
     {
       id: "iteration",
-      phase: "Iteration",
+      number: "Phase 02",
+      title: "Iteration",
       icon: RefreshCw,
-      year: "Phase 02",
-      description: "Continuous refinement through structured feedback loops. Each cycle brings clarity, each review surfaces hidden complexity.",
-      tech: ["Code Review", "Refactoring", "Best Practices"],
+      description: "Continuous refinement through structured feedback loops. Each cycle brings clarity, each...",
     },
     {
       id: "integration",
-      phase: "Integration",
+      number: "Phase 03",
+      title: "Integration",
       icon: Layers,
-      year: "Phase 03",
-      description: "Connecting disparate systems into cohesive solutions. The art of making complex simple, and simple elegant.",
-      tech: ["Architecture", "APIs", "Microservices"],
+      description: "Connecting disparate systems into cohesive solutions. The art of making complex simple,...",
     },
     {
       id: "acceleration",
-      phase: "Acceleration",
+      number: "Phase 04",
+      title: "Acceleration",
       icon: Zap,
-      year: "Phase 04",
-      description: "Optimizing for impact. Knowing when to build, when to leverage, and when to step back and think differently.",
-      tech: ["Performance", "Scale", "Leadership"],
+      description: "Optimizing for impact. Knowing when to build, when to leverage, and when to step back and...",
     },
   ];
 
-  const projects = [
-    {
-      id: "hostel-booking",
-      title: "Hostel-Booking Website",
-      description: "Full-stack booking platform",
-      icon: Database,
-    },
-    {
-      id: "llm-microservices",
-      title: "LLM Microservices",
-      description: "AI-powered backend services",
-      icon: Server,
-    },
-    {
-      id: "portfolio-dashboard",
-      title: "Portfolio Dashboard",
-      description: "Analytics & visualization tool",
-      icon: Code2,
-    },
-  ];
+  // const projects = [
+  //   {
+  //     id: "hostel-booking",
+  //     title: "Hostel-Booking Website",
+  //     description: "Full-stack booking platform",
+  //     icon: FolderOpen,
+  //   },
+  //   {
+  //     id: "llm-microservices",
+  //     title: "LLM Microservices",
+  //     description: "AI-powered backend services",
+  //     icon: FolderOpen,
+  //   },
+  //   {
+  //     id: "portfolio-dashboard",
+  //     title: "Portfolio Dashboard",
+  //     description: "Analytics & visualization tool",
+  //     icon: CodeXml,
+  //   },
+  // ];
 
   const companies = [
     {
-      name: "Google",
-      logo: "G",
-      color: "bg-blue-500/10 text-blue-500",
-      roles: ["Software Engineer", "Senior Engineer", "Staff Engineer"]
+      id: "nice",
+      name: "NICE Ltd",
+      logo: "NICE",
+      roles: ["Senior Director of Engineering"],
+      badge: "Career Growth",
     },
     {
-      name: "Microsoft",
-      logo: "M",
-      color: "bg-cyan-500/10 text-cyan-500",
-      roles: ["Engineer II", "Senior Engineer", "Principal Engineer"]
+      id: "capita",
+      name: "Capita SIMS (India) Pvt. Ltd.",
+      logo: "Capita",
+      roles: ["Head of Engineering"],
+      badge: "Career Growth",
     },
     {
-      name: "Amazon",
+      id: "ibm",
+      name: "IBM",
+      logo: "IBM",
+      roles: ["Senior Manager, Engineering"],
+      badge: "Career Growth",
+    },
+    {
+      id: "core-objects",
+      name: "Core Objects",
+      logo: "CO",
+      roles: ["Competency Head", "Engineering Manager"],
+      badge: "Career Growth",
+    },
+    {
+      id: "xpanxion",
+      name: "Xpanxion",
+      logo: "X",
+      roles: ["Senior Program Manager"],
+      badge: "Career Growth",
+    },
+    {
+      id: "zensar",
+      name: "Zensar Technologies",
+      logo: "Z",
+      roles: ["Project Manager"],
+      badge: "Career Growth",
+    },
+    {
+      id: "ajilon",
+      name: "Ajilon North America / Diaspark Inc",
       logo: "A",
-      color: "bg-orange-500/10 text-orange-500",
-      roles: ["SDE I", "SDE II", "Principal SDE"]
-    },
-    {
-      name: "Meta",
-      logo: "M",
-      color: "bg-indigo-500/10 text-indigo-500",
-      roles: ["Software Engineer", "Senior Engineer", "Tech Lead"]
-    },
-    {
-      name: "Apple",
-      logo: "A",
-      color: "bg-gray-500/10 text-gray-400",
-      roles: ["ICT2", "ICT4", "Engineering Coach"]
+      roles: ["Consultant"],
+      badge: "Career Growth",
     },
   ];
 
-  const techStack = [
-    { id: "version-control", icon: GitBranch, label: "Version Control" },
-    { id: "databases", icon: Database, label: "Databases" },
-    { id: "backend", icon: Server, label: "Backend" },
-    { id: "frontend", icon: Code2, label: "Frontend" },
-  ];
+  // const skills = [
+  //   { icon: GitBranch, label: "Version Control", id: "version-control" },
+  //   { icon: Database, label: "Databases", id: "databases" },
+  //   { icon: Server, label: "Backend", id: "backend" },
+  //   { icon: CodeXml, label: "Frontend", id: "frontend" },
+  // ];
 
   return (
-    <section className="min-h-screen w-full flex flex-col justify-start px-6 md:px-12 lg:px-24 py-20 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
+    <section id="experience" className="section-container-alt relative">
+      <span className="section-number">02</span>
 
-      {/* Section number */}
-      <motion.span
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 0.05, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="absolute right-6 md:right-12 top-20 font-mono text-[12rem] md:text-[16rem] font-bold text-foreground leading-none select-none"
-      >
-        02
-      </motion.span>
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <p className="font-mono text-sm text-muted-foreground mb-4 tracking-widest uppercase flex items-center gap-2">
+            <span className="w-8 h-px bg-muted-foreground" />
+            WORK EXPERIENCE
+          </p>
+          <h2 className="text-3xl md:text-5xl font-mono font-bold">
+            Execution Through <span className="text-primary">Experience</span>
+          </h2>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        {/* Header */}
-        <div className="mb-8 lg:mb-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center gap-2 mb-4"
-          >
-            <div className="w-12 h-px bg-primary" />
-            <span className="text-primary font-mono text-sm tracking-widest uppercase">
-              Work Experience
-            </span>
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-3xl md:text-4xl lg:text-5xl font-mono font-bold leading-tight"
-          >
-            Execution Through <span className="text-gradient">Experience</span>
-          </motion.h2>
-        </div>
-
-        {/* Experience phases - clickable */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-          {experiences.map((exp, index) => (
-            <motion.button
-              key={exp.phase}
+        {/* Phases - 3D Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+          {phases.map((phase, index) => (
+            <motion.div
+              key={phase.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 + index * 0.1, duration: 0.6 }}
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => navigate(`/phase/${exp.id}`, { state: { fromSection: 1 } })}
-              className="relative p-4 bg-surface-elevated border border-border hover:border-primary/50 transition-all duration-300 group text-left cursor-pointer"
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              onClick={() => navigate(`/phase/${phase.id}`)}
+              className="p-6 bg-background border border-border rounded-lg hover:border-primary/50 transition-all cursor-pointer group card-3d"
             >
-              <div className="absolute -top-2 left-4 px-2 py-0.5 bg-primary text-primary-foreground text-xs font-mono">
-                {exp.year}
+              <span className="inline-block px-3 py-1 bg-muted text-xs font-mono text-muted-foreground rounded mb-4">
+                {phase.number}
+              </span>
+              <div className="flex items-center gap-2 mb-2">
+                <phase.icon className="w-5 h-5 text-primary" />
+                <h3 className="font-mono font-semibold">{phase.title}</h3>
               </div>
-              <div className="mt-2">
-                <div className="flex items-center justify-between mb-2">
-                  <exp.icon className="w-5 h-5 text-primary" />
-                  <ArrowRight className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
-                </div>
-                <h3 className="font-mono font-semibold text-sm mb-1 group-hover:text-primary transition-colors">{exp.phase}</h3>
-                <p className="text-xs text-muted-foreground line-clamp-2">{exp.description}</p>
-              </div>
-            </motion.button>
+              <p className="text-sm text-muted-foreground line-clamp-2">
+                {phase.description}
+              </p>
+              <ArrowRight className="w-4 h-4 text-primary mt-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </motion.div>
           ))}
         </div>
 
-        {/* My Projects Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Projects - 3D Cards */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="mb-8"
+          className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 mb-4">
-            <FolderOpen className="w-5 h-5 text-primary" />
-            <h3 className="text-xl font-mono font-bold">My Projects (Dinesh)</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <h3 className="font-mono text-xl font-semibold mb-6 flex items-center gap-2">
+            <FolderOpen className="w-5 h-5" />
+            My Projects (Dinesh)
+          </h3>
+          <div className="grid md:grid-cols-3 gap-4">
             {projects.map((project, index) => (
-              <motion.button
-                key={project.id}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
-                whileHover={{ scale: 1.02, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => navigate(`/project/${project.id}`, { state: { fromSection: 1 } })}
-                className="text-left p-5 bg-surface-elevated border border-border hover:border-primary/50 transition-all duration-300 group"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="w-10 h-10 bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <project.icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                </div>
-                <h4 className="font-mono font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h4>
-                <p className="text-xs text-muted-foreground">{project.description}</p>
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Companies I Have Worked With */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          className="mb-8"
-        >
-          <div className="inline-flex items-center gap-2 mb-4">
-            <Building2 className="w-5 h-5 text-primary" />
-            <h3 className="text-xl font-mono font-bold">Companies I Have Worked With</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-            {companies.map((company, index) => (
               <motion.div
-                key={company.name}
+                key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.8 + index * 0.1, duration: 0.4 }}
-                className="p-4 bg-surface-elevated border border-border hover:border-primary/50 transition-all duration-300 group"
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                onClick={() => navigate(`/project/${project.id}`)}
+                className="p-6 bg-background border border-border rounded-lg hover:border-primary/50 transition-all cursor-pointer group flex items-center justify-between card-3d"
               >
-                <div className={`w-12 h-12 ${company.color} flex items-center justify-center mb-3 font-mono font-bold text-lg`}>
-                  {company.logo}
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                    <project.icon className="w-6 h-6 text-muted-foreground" />
+                  </div>
+                  <div>
+                    <h4 className="font-mono font-medium">{project.title}</h4>
+                    <p className="text-sm text-muted-foreground">{project.description}</p>
+                  </div>
                 </div>
-                <h4 className="font-mono font-semibold text-sm mb-3">{company.name}</h4>
+                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div> */}
 
-                {/* Career Progression */}
-                <div className="space-y-1">
-                  {company.roles.map((role, roleIndex) => (
-                    <div key={role} className="flex items-center gap-2">
-                      <div className={`w-1.5 h-1.5 rounded-full ${roleIndex === company.roles.length - 1 ? 'bg-primary' : 'bg-muted-foreground/30'}`} />
-                      <span className={`text-xs ${roleIndex === company.roles.length - 1 ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
-                        {role}
-                      </span>
-                    </div>
-                  ))}
+        {/* Companies - 3D Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <h3 className="font-mono text-xl font-semibold mb-6 flex items-center gap-2">
+            <Building2 className="w-5 h-5" />
+            Companies I Have Worked With
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+            {companies.slice(0, 5).map((company, index) => (
+              <motion.div
+                key={company.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="p-4 bg-background border border-border rounded-lg card-3d"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-foreground text-background rounded flex items-center justify-center font-mono font-bold text-xs">
+                    {company.logo}
+                  </div>
+                  <h4 className="font-mono font-medium text-sm leading-tight">{company.name}</h4>
                 </div>
-
-                {/* Progression Arrow */}
-                <div className="mt-3 flex items-center gap-1 text-primary/60">
-                  <TrendingUp className="w-3 h-3" />
-                  <span className="text-[10px] font-mono">Career Growth</span>
+                {company.roles.map((role, idx) => (
+                  <p key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    {role}
+                  </p>
+                ))}
+                <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
+                  <span>↗</span> {company.badge}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+          <div className="grid sm:grid-cols-2 gap-4 mt-4">
+            {companies.slice(5).map((company, index) => (
+              <motion.div
+                key={company.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: (index + 5) * 0.08 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="p-4 bg-background border border-border rounded-lg card-3d"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-foreground text-background rounded flex items-center justify-center font-mono font-bold text-xs">
+                    {company.logo}
+                  </div>
+                  <h4 className="font-mono font-medium text-sm leading-tight">{company.name}</h4>
                 </div>
+                {company.roles.map((role, idx) => (
+                  <p key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    {role}
+                  </p>
+                ))}
+                <p className="text-xs text-muted-foreground mt-2 flex items-center gap-1">
+                  <span>↗</span> {company.badge}
+                </p>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
-        {/* Tech stack - clickable */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+        {/* Skills - 3D Cards with navigation */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-6"
+          className="flex justify-center"
         >
-          {techStack.map((tech, index) => (
-            <motion.button
-              key={tech.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 1.1 + index * 0.1, duration: 0.4 }}
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate(`/skill/${tech.id}`, { state: { fromSection: 1 } })}
-              className="flex flex-col items-center gap-2 group cursor-pointer"
-            >
-              <div className="w-12 h-12 bg-surface-elevated border border-border flex items-center justify-center group-hover:border-primary/50 group-hover:bg-primary/10 transition-all">
-                <tech.icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-              </div>
-              <span className="text-xs font-mono text-muted-foreground group-hover:text-primary transition-colors">{tech.label}</span>
-            </motion.button>
-          ))}
-        </motion.div>
+          <div className="flex flex-wrap justify-center gap-8">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={skill.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
+                onClick={() => navigate(`/skill/${skill.id}`)}
+                className="flex flex-col items-center gap-2 cursor-pointer group"
+              >
+                <div className="w-16 h-16 bg-background border border-border rounded-full flex items-center justify-center card-3d group-hover:border-primary/50 transition-colors">
+                  <skill.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                </div>
+                <span className="text-xs font-mono text-muted-foreground text-center group-hover:text-primary transition-colors">
+                  {skill.label}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div> */}
       </div>
     </section>
   );
