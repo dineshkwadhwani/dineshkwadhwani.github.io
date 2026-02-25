@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   BASE — DESIGN TOKENS
+========================= */
+@layer base {
+  :root {
+    --background: 40 20% 96%;
+    --foreground: 204 12% 33%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 12% 33%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 12% 33%;
+
+    --primary: 204 12% 33%;
+    --primary-foreground: 40 20% 96%;
+
+    --secondary: 190 12% 62%;
+    --secondary-foreground: 204 12% 20%;
+
+    --muted: 40 25% 88%;
+    --muted-foreground: 36 10% 40%;
+
+    --accent: 190 12% 62%;
+    --accent-foreground: 204 12% 20%;
+    --accent-soft: 190 20% 90%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 36 14% 70%;
+    --input: 36 14% 70%;
+    --ring: 190 12% 62%;
+
+    --radius: 0.75rem;
+
+    --navy: 204 12% 33%;
+    --navy-deep: 204 15% 25%;
+    --sage: 190 12% 62%;
+    --sage-hover: 190 15% 55%;
+    --sage-soft: 190 20% 90%;
+    --beige: 40 25% 88%;
+    --beige-warm: 38 30% 82%;
+    --olive: 36 10% 40%;
+    --cream: 40 20% 96%;
+    --executive-gold: 38 40% 65%;
+  }
+
+  .dark {
+    --background: 204 15% 12%;
+    --foreground: 40 20% 96%;
+    --card: 204 12% 16%;
+    --card-foreground: 40 20% 96%;
+    --popover: 204 12% 16%;
+    --popover-foreground: 40 20% 96%;
+    --primary: 40 20% 96%;
+    --primary-foreground: 204 12% 16%;
+    --secondary: 190 15% 45%;
+    --secondary-foreground: 40 20% 96%;
+    --muted: 204 12% 22%;
+    --muted-foreground: 40 20% 75%;
+    --accent: 190 15% 50%;
+    --accent-foreground: 40 20% 96%;
+    --border: 204 10% 25%;
+    --input: 204 10% 25%;
+    --ring: 190 15% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* =========================
+   UTILITIES — VISUAL SYSTEM
+========================= */
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(
+      135deg,
+      hsl(40, 20%, 96%) 0%,
+      hsl(38, 25%, 88%) 45%,
+      hsl(38, 30%, 82%) 100%
+    );
+  }
+
+  .bg-gradient-card {
+    background: linear-gradient(
+      145deg,
+      hsl(190, 20%, 90%) 0%,
+      hsl(190, 15%, 75%) 100%
+    );
+  }
+
+  .hero-radial {
+    background:
+      radial-gradient(circle at 15% 25%, hsla(190, 12%, 62%, 0.25), transparent 40%),
+      radial-gradient(circle at 85% 75%, hsla(204, 12%, 33%, 0.18), transparent 45%),
+      linear-gradient(
+        135deg,
+        hsl(40, 20%, 96%) 0%,
+        hsl(38, 25%, 88%) 45%,
+        hsl(38, 30%, 82%) 100%
+      );
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .shadow-executive {
+    box-shadow: 0 20px 60px rgba(76, 87, 96, 0.1);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 80px rgba(76, 87, 96, 0.12);
+  }
+
+  /* =========================
+     EXECUTIVE MOTION SYSTEM
+  ========================= */
+
+  /* Header enters calmly */
+  .animate-header-enter {
+    animation: headerEnter 300ms ease-out both;
+  }
+
+  @keyframes headerEnter {
+    from {
+      opacity: 0;
+      transform: translateY(-6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile menu opens like a controlled panel */
+  .animate-mobile-menu {
+    animation: mobileMenuEnter 240ms ease-out both;
+  }
+
+  @keyframes mobileMenuEnter {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Section reveal — use sparingly */
+  .animate-section-reveal {
+    animation: sectionReveal 480ms ease-out both;
+  }
+
+  @keyframes sectionReveal {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Generic fade (legacy / limited use) */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.animate-chat {
+  animation: chatOpen 0.25s ease;
+}
+
+@keyframes chatOpen {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
