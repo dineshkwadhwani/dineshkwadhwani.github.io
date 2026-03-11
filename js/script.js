@@ -161,3 +161,37 @@ document.getElementById("closeModal").onclick=()=>{
 modal.style.display="none"
 
 }
+
+// ABOUT TABS
+
+document.querySelectorAll(".tab").forEach(tab=>{
+
+tab.addEventListener("click",()=>{
+
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"))
+tab.classList.add("active")
+
+document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"))
+
+document.getElementById(tab.dataset.tab).classList.add("active")
+
+})
+
+})
+
+
+// EXPERIENCE ACCORDION
+
+const expItems=document.querySelectorAll(".exp-item")
+
+expItems.forEach(item=>{
+
+item.querySelector(".exp-header").addEventListener("click",()=>{
+
+expItems.forEach(i=>i.classList.remove("active"))
+
+item.classList.add("active")
+
+})
+
+})
