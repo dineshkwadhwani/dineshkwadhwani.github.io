@@ -1,180 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Coach Dinesh | Leadership Coaching</title>
+<title>Coach Dinesh | Executive Leadership Coaching</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+font-family:Inter,sans-serif;
+color:white;
+line-height:1.6;
+
+background:
+radial-gradient(circle at 10% 20%,#1e3a8a55,transparent 40%),
+radial-gradient(circle at 90% 70%,#2563eb33,transparent 40%),
+#0f172a;
+}
+
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+opacity:.8;
+}
+
+nav a:hover{opacity:1}
+
+
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+align-items:center;
+gap:60px;
+padding:0 10%;
+}
+
+.hero h1{
+font-family:"Playfair Display",serif;
+font-size:58px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:.9;
+margin-bottom:30px;
+}
+
+.btn{
+padding:15px 36px;
+border-radius:40px;
+background:linear-gradient(135deg,#3b82f6,#6366f1);
+color:white;
+text-decoration:none;
+font-weight:500;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.hero img{
+width:100%;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+
+
+/* SECTION */
+
+section{
+padding:120px 10%;
+max-width:1400px;
+margin:auto;
+}
+
+.section-title{
+font-family:"Playfair Display",serif;
+font-size:40px;
+margin-bottom:50px;
+}
+
+
+
+/* STORY */
+
+.story{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+}
+
+.story-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,.1);
+padding:40px;
+border-radius:18px;
+backdrop-filter:blur(10px);
+}
+
+
+
+/* APPROACH */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.approach{
+background:rgba(255,255,255,.04);
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.08);
+transition:.25s;
+}
+
+.approach:hover{
+transform:translateY(-6px);
+border-color:#3b82f6;
+}
+
+
+
+/* JOURNEY */
+
+.timeline{
+border-left:2px solid rgba(255,255,255,.1);
+padding-left:30px;
+}
+
+.timeline div{
+margin-bottom:40px;
+}
+
+
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(135deg,#3b82f622,#6366f122);
+border-top:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.cta h2{
+font-family:"Playfair Display",serif;
+font-size:38px;
+margin-bottom:25px;
+}
+
+
+
+/* FOOTER */
+
+footer{
+padding:60px 10%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+opacity:.7;
+font-size:14px;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
 
-<div class="container nav-container">
+<nav>
 
-<div class="logo">
-<img src="images/logo.png">
+<div><strong>Coach Dinesh</strong></div>
+
+<div>
+<a href="#story">Journey</a>
+<a href="#approach">Approach</a>
+<a href="#coaching">Coaching</a>
+<a href="#contact">Contact</a>
 </div>
 
-<nav id="navMenu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#approach">Approach</a>
-<a href="#studio">Coaching Studio</a>
-<a href="#contact">Contact</a>
 </nav>
 
-<div class="hamburger" id="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>
+Leadership Growth for Technology Leaders
+</h1>
+
+<p>
+
+I work with engineering leaders, technology executives and emerging
+leaders who want to strengthen their leadership presence,
+navigate complex organisations and build high-performing teams.
+
+</p>
+
+<a class="btn" href="#contact">
+Start a Conversation
+</a>
 
 </div>
 
-</header>
 
-
-
-<section id="home" class="hero">
-
-<div class="container hero-grid">
-
-<div class="hero-text">
-
-<h1>Hi, I am Coach Dinesh</h1>
-
-<h2 id="heroHeadline"></h2>
-
-<p id="heroSubtext"></p>
-
-<a class="cta">Schedule a Conversation</a>
-
-</div>
-
-<div class="hero-image">
-<img src="images/hero-dinesh.png">
-</div>
-
+<div>
+<img src="images/hero-dinesh.png">  
 </div>
 
 </section>
 
 
 
-<section id="about" class="section">
+<!-- JOURNEY -->
 
-<div class="container">
+<section id="story">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">My Journey</h2>
 
-<div class="tabs">
+<div class="story">
 
-<button class="tab active" data-tab="journey">Journey</button>
-<button class="tab" data-tab="education">Education</button>
-<button class="tab" data-tab="experience">Experience</button>
+<div class="story-card">
 
-</div>
+<p>
 
+My leadership journey began as a software engineer passionate about
+building technology products. Over the past two decades, I have grown
+through multiple leadership roles in global organisations,
+leading distributed engineering teams and delivering enterprise
+platforms used by millions.
 
-<div class="tab-content active" id="journey">
+</p>
 
-<ul class="journey-list">
+<br>
 
-<li><strong>Enterprise Engineering Leader</strong> progressing from technologist to Senior Director combining deep technical expertise with strategic execution.</li>
+<p>
 
-<li><strong>Built and scaled Global Capability Centers</strong> and engineering organisations exceeding 300 professionals.</li>
+As I moved into senior leadership roles, I discovered that leadership
+success was not just about technical capability. It required
+clarity of thinking, the ability to influence stakeholders,
+and the ability to develop other leaders.
 
-<li><strong>Owned technology vision and platform strategy</strong> driving cloud-native transformation and AI enablement.</li>
-
-<li><strong>Influenced several hundred million dollars</strong> in enterprise product revenue.</li>
-
-<li><strong>Directed distributed global teams</strong> aligning engineering, product and business stakeholders.</li>
-
-<li><strong>Institutionalised engineering excellence</strong> embedding DevOps maturity and modern engineering practices.</li>
-
-</ul>
+</p>
 
 </div>
 
 
+<div class="timeline">
 
-<div class="tab-content" id="education">
-
-<ul class="education-list">
-
-<li>MBA (Systems & Marketing) — 1998, Indore University</li>
-
-<li>Bachelor of Science — 1995, Indore University</li>
-
-<li>Hons. Dip in System Mang. — 1997, NIIT Indore</li>
-
-</ul>
-
+<div>
+<strong>Engineering Leader</strong><br>
+Leading global engineering teams and complex technology platforms.
 </div>
 
-
-
-<div class="tab-content" id="experience">
-
-<div class="exp-accordion">
-
-<div class="exp-item active">
-
-<div class="exp-header">Leadership Roles</div>
-
-<div class="exp-body">
-
-<ul>
-
-<li><strong>NICE Ltd</strong> — Senior Director R&D (Sept 2021 – Present)</li>
-
-<li><strong>Capita Sims</strong> — Head of Product Dev (May 2016 – Sept 2021)</li>
-
-<li><strong>IBM India</strong> — Sr Manager Product Dev (Mar 2010 – May 2016)</li>
-
-<li><strong>CoreObjects</strong> — Engineering Manager (Oct 2008 – Mar 2010)</li>
-
-<li><strong>Xpanxion</strong> — Program Manager (Jan 2006 – Sept 2008)</li>
-
-</ul>
-
+<div>
+<strong>Senior Director</strong><br>
+Driving product and platform strategy across large organisations.
 </div>
 
-</div>
-
-
-
-<div class="exp-item">
-
-<div class="exp-header">Engineering Roles</div>
-
-<div class="exp-body">
-
-<ul>
-
-<li><strong>Zensar Technologies</strong> — Development Lead (Mar 2002 – Jan 2006)</li>
-
-<li><strong>Ajilon LLC</strong> — Software Developer (Jun 2001 – Mar 2002)</li>
-
-<li><strong>Diaspark Inc.</strong> — Software Developer (Jan 2000 – Jun 2001)</li>
-
-<li><strong>Power Infosys</strong> — Software Developer (Jul 1997 – Jan 2000)</li>
-
-</ul>
-
-</div>
-
-</div>
-
+<div>
+<strong>Leadership Coach</strong><br>
+Helping leaders grow their clarity, influence and leadership impact.
 </div>
 
 </div>
@@ -185,104 +308,79 @@
 
 
 
-<section id="approach" class="section approach">
+<!-- APPROACH -->
 
-<div class="container">
+<section id="approach">
 
-<h2 class="section-title">The Approach</h2>
+<h2 class="section-title">My Coaching Approach</h2>
 
-<div class="approach-grid">
+<div class="grid">
 
-<div class="approach-image">
-<img id="approachImage" src="images/coaching1.jpg">
-</div>
+<div class="approach">
 
+<h3>Leadership Reflection</h3>
 
-<div class="accordion">
+<p>
 
-<div class="accordion-item active" data-image="coaching1.jpg">
+Creating space for leaders to step back from daily execution and
+reflect deeply on their leadership impact.
 
-<div class="accordion-header">1-1 Coaching</div>
-
-<div class="accordion-body">
-Structured executive coaching sessions designed to unlock clarity, improve leadership communication, and accelerate professional growth.
-</div>
+</p>
 
 </div>
 
 
-<div class="accordion-item" data-image="coaching2.jpg">
+<div class="approach">
 
-<div class="accordion-header">Group Coaching</div>
+<h3>Clarity & Perspective</h3>
 
-<div class="accordion-body">
-Peer learning environments where leaders grow through shared insights, collaboration and structured leadership exercises.
-</div>
+<p>
 
-</div>
+Helping leaders navigate complexity and make better strategic
+decisions.
 
-
-<div class="accordion-item" data-image="coaching3.jpg">
-
-<div class="accordion-header">Leadership Offsites</div>
-
-<div class="accordion-body">
-Immersive strategy sessions helping leadership teams align vision, priorities and execution plans.
-</div>
+</p>
 
 </div>
 
 
-<div class="accordion-item" data-image="coaching4.jpg">
+<div class="approach">
 
-<div class="accordion-header">Classroom Sessions</div>
+<h3>Leadership Presence</h3>
 
-<div class="accordion-body">
-Leadership programs covering engineering leadership, strategic thinking and stakeholder management.
-</div>
+<p>
 
-</div>
+Strengthening communication, influence and executive presence.
 
-
-<div class="accordion-item" data-image="workshop.jpg">
-
-<div class="accordion-header">Workshops</div>
-
-<div class="accordion-body">
-Hands-on leadership workshops combining strategic thinking frameworks with collaborative exercises.
-</div>
+</p>
 
 </div>
 
-</div>
+
+<div class="approach">
+
+<h3>Systems Thinking</h3>
+
+<p>
+
+Understanding organisations as complex systems and leading
+effectively within them.
+
+</p>
 
 </div>
 
-</div>
 
-</section>
+<div class="approach">
 
+<h3>Action & Integration</h3>
 
+<p>
 
-<section id="studio" class="section studio">
+Turning insights from coaching conversations into real leadership
+actions.
 
-<div class="container">
-
-<h2 class="section-title">Coaching Studio</h2>
-
-<div class="tool-carousel">
-
-<button id="prevTool">❮</button>
-
-<div class="tool-display">
-
-<img id="toolImage" src="images/tool1.png">
-
-<h3 id="toolTitle">Leadership Circle Profile</h3>
-
-</div>
-
-<button id="nextTool">❯</button>
+</p>
 
 </div>
 
@@ -292,53 +390,68 @@ Hands-on leadership workshops combining strategic thinking frameworks with colla
 
 
 
-<section id="contact" class="section contact">
+<!-- COACHING -->
 
-<div class="container">
+<section id="coaching">
 
-<h2 class="section-title">Contact</h2>
+<h2 class="section-title">How I Help Leaders</h2>
 
-<p>Email: <a href="mailto:hello@thecoachdinesh.com">hello@thecoachdinesh.com</a></p>
+<div class="grid">
 
-<p>Instagram: @thecoachdinesh</p>
+<div class="approach">
+<h3>Executive Coaching</h3>
+<p>1-1 coaching for senior technology leaders navigating complex roles.</p>
+</div>
 
-<p>YouTube: The Coach Dinesh</p>
+<div class="approach">
+<h3>Engineering Leadership Coaching</h3>
+<p>Helping engineering managers and directors grow into strategic leaders.</p>
+</div>
 
-<p>Website: www.thecoachdinesh.com</p>
+<div class="approach">
+<h3>Leadership Transitions</h3>
+<p>Supporting leaders stepping into new or expanded responsibilities.</p>
+</div>
+
+<div class="approach">
+<h3>Leadership Workshops</h3>
+<p>Interactive sessions for leadership teams and organisations.</p>
+</div>
 
 </div>
 
 </section>
+
+
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+<h2>
+Start Your Leadership Growth Journey
+</h2>
+
+<a class="btn" href="mailto:hello@thecoachdinesh.com">
+Schedule a Conversation
+</a>
+
+</section>
+
 
 
 <footer>
 
-<p>© 2026 Coach Dinesh</p>
+<div>
+© 2026 Coach Dinesh
+</div>
+
+<div>
+LinkedIn | YouTube | Instagram
+</div>
 
 </footer>
 
 
-
-<div id="toolModal" class="modal">
-
-<div class="modal-content">
-
-<span id="closeModal">&times;</span>
-
-<h2 id="modalTitle"></h2>
-
-<p id="modalDescription"></p>
-
-<p><strong>Execution:</strong> Coming soon</p>
-
-</div>
-
-</div>
-
-
-
-<script src="js/script.js"></script>
-
 </body>
-
 </html>
