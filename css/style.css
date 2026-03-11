@@ -97,9 +97,16 @@ border-radius:8px;
 background:#AACDDC;
 padding:15px;
 cursor:pointer;
-margin-top:10px;
 font-weight:600;
 border-radius:6px;
+}
+
+.accordion-item{
+margin-top:10px;
+}
+
+.accordion-item:first-child{
+margin-top:0;
 }
 
 .accordion-body{
