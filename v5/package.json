@@ -2,12 +2,14 @@
   "name": "anti",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://dineshkwadhwani.github.io/v5",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
