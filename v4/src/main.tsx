@@ -5,7 +5,7 @@ import "./index.css";
 import { HashRouter } from "react-router-dom";  // 👈 ADD THIS
 
 createRoot(document.getElementById("root")!).render(
-  <HashRouter>   {/* 👈 WRAP APP */}
+  <HashRouter>  
     <App />
   </HashRouter>
 );
