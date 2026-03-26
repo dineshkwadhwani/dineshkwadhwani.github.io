@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Leadership Authority – Coach Dinesh</title>
-    <meta name="description" content="Executive presence, leadership coaching, and strategic advisory by Coach Dinesh. 27+ years guiding 500+ leaders through transformation." />
-    <meta name="author" content="Coach Dinesh" />
 
-    <meta property="og:title" content="Leadership Authority – Executive Presence" />
-    <meta property="og:description" content="Technology and product executive with 27+ years leading global organizations, scaling engineering functions, and guiding enterprises through transformation." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership Authority</title>
+  <!-- Load Standard Compiled CSS containing Tailwind + Custom Styles -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@CoachDinesh" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+<body class="bg-background text-foreground antialiased" style="font-family: 'Inter', sans-serif; line-height: 1.8;">
 
-    <!-- Preconnect for fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Router Mount Point -->
+  <div id="app-root"></div>
 
-    <!-- Theme color for mobile browsers -->
-    <meta name="theme-color" content="#4C5760" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  </head>
+  <!-- Global Floating Chat Button/Overlay -->
+  <div id="global-chat-root"></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- Application Logic -->
+  <script src="./js/components/header.js"></script>
+  <script src="./js/components/hero.js"></script>
+  <script src="./js/components/journey.js"></script>
+  <script src="./js/components/credentials.js"></script>
+  <script src="./js/components/testimonials.js"></script>
+  <script src="./js/components/advisory.js"></script>
+  <script src="./js/components/ai-section.js"></script>
+  <script src="./js/components/contact.js"></script>
+  <script src="./js/components/footer.js"></script>
+  <script src="./js/components/executive-chat.js"></script>
+  <script src="./js/components/leadership-tool.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
